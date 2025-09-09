@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samer Zaid — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --coffee: #6f4e37; }
+    body { scroll-behavior: smooth; }
+    .btn{transition:.3s}
+    .btn:hover{transform:translateY(-2px) scale(1.05);background:var(--coffee);color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+    .nav-link{position:relative;cursor:pointer;transition:.3s}
+    .nav-link:hover{color:var(--coffee)}
+    .nav-link.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;background:var(--coffee);border-radius:9999px}
+    [data-animate]{opacity:0;transform:translateY(20px);transition:all 0.8s ease}
+    [data-animate].visible{opacity:1;transform:translateY(0)}
+    .card{transition:transform .3s, box-shadow .3s}
+    .card:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,.15)}
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-green-900 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-extrabold">Samer Zaid</a>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="bg-gradient-to-r from-green-900 to-[var(--coffee)] text-white">
+    <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div data-animate>
+        <h1 class="text-4xl font-extrabold">AI Engineer specialized in ML & Embedded AI</h1>
+        <p class="mt-4 text-lg text-white/90">I build intelligent solutions on cloud, edge devices, and hardware prototypes.</p>
+        <div class="mt-6 flex gap-3">
+          <a class="btn px-4 py-2 rounded-xl border" href="https://github.com/SamerZaid20" target="_blank">GitHub</a>
+          <a class="btn px-4 py-2 rounded-xl border" href="https://www.linkedin.com/in/samer-zaid/" target="_blank">LinkedIn</a>
+          <a class="btn px-4 py-2 rounded-xl border" href="D:\portfolio\resume\samermozaid_ai&embedded-cv.pdf" target="_blank">Resume</a>
+        </div>
+      </div>
+      <div class="justify-self-center" data-animate>
+        <img src="C:\Users\LENOVO\Downloads\portfolio\assets\profile.jpg.jpg" alt="Samer Zaid" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-extrabold text-green-900" data-animate>About Me</h2>
+    <p class="mt-4" data-animate>I’m an AI Engineer with a strong focus on Machine Learning and hands-on experience in developing embedded and IoT projects...</p>
+    <p class="mt-4" data-animate>I have contributed to projects involving IoT devices, AI-powered applications, and ML deployment. My approach blends technical problem-solving with a practical mindset.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-neutral-100 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-green-900 text-center" data-animate>Projects</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+
+        <!-- Old Projects -->
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🌡️ IoT Smart Sensor</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>👤 Face Recognition Access</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🤖 Line-Following Robot</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🚦 Traffic Light System</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🔘 LED Click Counter</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>💡 LED Brightness Control</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🎛️ LED Control with Switches</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>⚡ DC Motor Speed Control</div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🚗 2WD Robot RC</div>
+
+        <!-- New Projects -->
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>
+          🧠 Mental Health Chatbot  
+          <p class="mt-2 text-sm text-neutral-700">Developed a chatbot to provide mental health support and resources.<br><strong>Tools:</strong> AI, NLP</p>
+        </div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>
+          🌱 Plant Disease Detection  
+          <p class="mt-2 text-sm text-neutral-700">Built a system to detect and classify plant diseases using image processing techniques.<br><strong>Tools:</strong> Computer Vision, AI</p>
+        </div>
+        <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>
+          🏥 Smart Health Care System (Generative AI)  
+          <p class="mt-2 text-sm text-neutral-700">Designed a healthcare support system leveraging generative AI models for diagnostic assistance.<br><strong>Tools:</strong> Generative AI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-extrabold text-green-900" data-animate>Offered Services</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🔹 AI & Machine Learning Model Development</div>
+      <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🔹 IoT & Embedded Prototyping</div>
+      <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🔹 Computer Vision & NLP Solutions</div>
+      <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🔹 Generative AI Applications</div>
+      <div class="card rounded-2xl border bg-white p-6 shadow" data-animate>🔹 Automation & Robotics</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-extrabold text-green-900" data-animate>Client Feedback</h2>
+    <blockquote class="mt-6 bg-white p-6 rounded-2xl shadow italic" data-animate>
+      “Samer delivered exactly what we needed — a reliable AI-powered prototype that exceeded expectations.”
+    </blockquote>
+    <blockquote class="mt-6 bg-white p-6 rounded-2xl shadow italic" data-animate>
+      “Professional, communicative, and highly skilled in AI & embedded systems. Would work with him again!”
+    </blockquote>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-neutral-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-green-900" data-animate>Contact</h2>
+      <form class="mt-6 space-y-4" action="https://formspree.io/f/meozwyzv" method="POST" data-animate>
+        <input type="text" name="name" placeholder="Your Name" class="w-full border rounded px-3 py-2"/>
+        <input type="email" name="email" placeholder="Your Email" class="w-full border rounded px-3 py-2"/>
+        <textarea name="message" rows="5" placeholder="Message" class="w-full border rounded px-3 py-2"></textarea>
+        <button type="submit" class="btn px-4 py-2 rounded-xl border">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-white py-6 text-sm text-center">
+    © <span id="y"></span> Samer Mohamed Zaid
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const items=document.querySelectorAll("[data-animate]");
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.1});
+    items.forEach(item=>observer.observe(item));
+  </script>
+</body>
+</html>
